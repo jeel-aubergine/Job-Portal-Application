@@ -82,15 +82,15 @@ Access the application at `http://127.0.0.1:8000/`.
 ## Project Structure
 
 ```plaintext
-job_portal/
+your_directory_or_repo/
 ├── job_portal/         # Project-level settings and URLs
 ├── user/               # User authentication app
 ├── company/            # Company management app
 ├── job/                # Job management app
 ├── templates/          # HTML templates for the app
-├── static/             # Static files (CSS, JS, images)
-├── requirements.txt    # Python dependencies
-└── README.md           # Project documentation
+├── manage.py           
+├── requirements.txt   
+└── README.md          
 ```
 
 ---
