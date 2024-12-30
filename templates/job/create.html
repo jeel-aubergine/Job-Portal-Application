@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h2>Create Job</h2>
+  <form method="post">
+    {% csrf_token %}
+
+    <div class="form-floating mb-3">
+        <input type="text" name="title" class="form-control" id="floatingInput" placeholder="Job Title">
+        <label for="floatingInput">Job Title</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <textarea name="description" class="form-control" id="floatingInput" placeholder="Job Description"></textarea>
+        <label for="floatingInput">Job Description</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" name="location" class="form-control" id="floatingInput" placeholder="Location">
+        <label for="floatingInput">Location</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" name="salary_range" class="form-control" id="floatingInput" placeholder="Salary Range">
+        <label for="floatingInput">Salary Range</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" name="tags" class="form-control" id="floatingInput" placeholder="Tags">
+        <label for="floatingInput">Tags</label>
+    </div>
+
+    <button class="btn btn-success" type="submit">Create Job</button>
+
+  </form>
+{% endblock %}

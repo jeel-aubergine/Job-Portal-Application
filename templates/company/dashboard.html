@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h4>Company Dashboard</h4>
+
+{% if company %}
+<h2>Welcome to the dashboard for {{ company.name }}!</h2>
+<p><strong>Address:</strong> {{ company.address }}</p>
+<p><strong>Contact Number:</strong> {{ company.contact_number }}</p>
+<button class="btn btn-primary m-2" type="button">
+    <a href="{% url 'edit_company' %}">Edit</a>
+</button>
+<button class="btn btn-success m-2" type="button">
+    <a href="{% url 'create_job' %}">Create Job</a>
+</button>
+<button class="btn btn-success m-2" type="button">
+    <a href="{% url 'list_jobs' %}">Job List</a>
+</button>
+{% else %}
+
+<h2>Register Your Company</h2>
+<button class="btn btn-primary m-2" type="button">
+    <a href="{% url 'register_company' %}">Register</a>
+</button>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="container text-center">
+  {% if request.user.is_authenticated %}
+  <div class="row mb-3">
+    <div class="col">
+      <h1> Hello, {{ request.user.username }}! </h1>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <button type="button" class="btn btn-danger">
+        <a href="{% url 'signout' %}"> Sign Out </a>
+      </button>
+    </div>
+  </div>
+  {% else %}
+  <div class="row mb-3">
+    <div class="col">
+      <h1> Welcome to Job Portal ! </h1>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <button type="button" class="btn btn-primary m-2">
+        <a href="{% url 'signin' %}"> Sign In </a>
+      </button>
+      <button type="button" class="btn btn-primary m-2">
+            <a href="{% url 'signup' %}"> Sign Up </a>
+        </button>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% endblock %}
