@@ -15,8 +15,8 @@ A Django-based web application that allows users to manage job postings. This pr
 Before setting up the project, ensure you have the following installed:
 
 - Python 3.10+
-- pip (Python package manager)
-- Virtualenv (optional but recommended)
+- pip
+- Virtual Enviroments
 - Git
 
 ---
@@ -26,7 +26,7 @@ Before setting up the project, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/jeel-aubergine/Job-Portal-Application.git
 cd job_portal
 ```
 
@@ -79,37 +79,18 @@ Access the application at `http://127.0.0.1:8000/`.
 
 ---
 
-## Usage Instructions
-
-### 1. User Authentication
-- Navigate to `/user/signup/` to create a new account.
-- Login at `/user/login/`.
-
-### 2. Company Registration
-- After logging in, navigate to `/company/register/` to register your company.
-
-### 3. Job Management
-- Create jobs at `/job/create/`.
-- View and manage jobs at `/job/list/`.
-  - Edit jobs by clicking on the "Edit" link.
-  - Delete jobs by clicking on the "Delete" link.
-
-### 4. Admin Panel
-Access the Django admin panel at `/admin/` to manage users, companies, and jobs directly.
-
----
-
 ## Project Structure
 
 ```plaintext
-job_portal/
+your_directory_or_repo/
 ├── job_portal/         # Project-level settings and URLs
 ├── user/               # User authentication app
 ├── company/            # Company management app
 ├── job/                # Job management app
-├── templates/          # HTML templates for the app 
-├── requirements.txt    # Python dependencies
-└── README.md           # Project documentation
+├── templates/          # HTML templates for the app
+├── manage.py           
+├── requirements.txt   
+└── README.md          
 ```
 
 ---
