@@ -88,4 +88,3 @@ def edit_company(request):
         return redirect('company_dashboard')
 
     return render(request, 'company/edit.html', {'company': company})
-
